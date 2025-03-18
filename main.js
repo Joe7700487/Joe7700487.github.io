@@ -8,7 +8,6 @@ function main () {
     var start;
     var end;
 
-
     //OUTPUT: draw the grid onto the screen with the grid code
     var outputGrid = function (gridCode) {
         document.getElementById('outputId').innerHTML = gridCode;
