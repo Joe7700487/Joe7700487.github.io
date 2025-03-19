@@ -1,71 +1,33 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset='UTF-8'>
-        <title>Exam Project</title>
-        <meta name='description' content='Description of my final project'>
-        <meta name='author' content='Joe Petrash'>
-        <link rel="stylesheet" href="styles.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-        </script>
-        <!-- 
-                Todo list:
-                        1. ADD OBSTIACLES
-                        2. 
-                        3. 
-                        4.
-                        5
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            
-            
-                Change Log: 
-                        16. dec 2022 - Created!
-                                       created the grid that contains all 
-                                       data and draws it on the screen
-                                       assigned each grid tile a unique id and an obj
-                                        attached containing all of the tile's data
-                        19. dec 2022 - grid scales correctly when change the size of the grid
-                        3. jan 2023  - functions to evaluate g and h cost work now
-                        4. jan 2023  - function created to get the neighbors of a cell
-                        12. jan 2023 - added random obstables to the grid, in the actual 
-                                    algorithm you can evaluate a square and its neighbors
-                        
-        -->
-
-    </head>
-	<!--
-------------STYLE GUIDE FOR LONG LINES: DO NOT PASS COLUMN 95 -------------------------------|			
-	-->
-    <body>
-        <h1 id='headerId'>A* algorithm demo</h1>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <p>NOTE: path likely wont be the most optimal as my code doesnt reevalutate 
-        tiles its explored before <br>
-        to make a new start/end tile you have to refresh first <br>
-        <strong>click on tiles to make obstacles, 
-                set start and end tiles before finding path</strong></p>
-        <div id='outputId'><table></table></div>
-        <button id='buttonid'>create grid</button>
-        <input id='xinput' value='10'>
-        <input id='yinput' value='10'> the width and height of the grid <br>
-
-        <button id='setStartButtonId'>set start</button>
-        <input id='startxinput' value='0'>
-        <input id='startyinput' value='0'> x and y coordinates of your start tile <br>
-
-        <button id='setEndButtonId'>set end</button>
-        <input id='endxinput' value='5'>
-        <input id='endyinput' value='5'> x and y coordinates of your end tile <br>
-
-        <button id='obstaclesButtonId'>create random obstacles</button> <br>
-        <button id='clearObstaclesButtonId'>clear obstacles</button> <br>
-        <button id='startButtonId'>find path</button>  
-        <p id='debugId'>placed obstacle: </p>
-
-        <img id="imgId" src="https://upload.wikimedia.org/wikipedia/commons/t
-                            humb/8/8f/Checkmark.svg/2304px-Checkmark.svg.png">
-
-        <script src="main.js"></script>
-    </body>
+    <section id="intro">
+        <p>Welcome to my personal portfolio! Here, you can learn more about me, explore my projects, and get in touch. Feel free to browse around and reach out if you have any questions.</p>
+    </section>
+    <section id="projects">
+        <p>stuff</p>
+    </section>
+    <section id="contact">
+        <p>stuff</p>
+    </section>
+    
+    <script src="scripts/main.js"></script>
+</body>
 </html>
