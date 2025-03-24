@@ -53,3 +53,11 @@ section#contact {
     text-align: center; /* Center the text */
     background-color: white;
 }
+
+section#about {
+    padding: 20px;
+    color: #238f89; /* Text color */
+    font-size: 1.2em; /* Adjust font size */
+    text-align: center; /* Center the text */
+    background-color: white;
+}
