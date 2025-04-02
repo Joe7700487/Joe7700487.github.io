@@ -1,11 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- have a picture cube that in specific positions have project information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        /* Flexbox styling for project sections */
+        .parent h3 {
+            margin: 0;
+        }
+
+        .parent img {
+            margin-right: 20px;
+        }
+
+        /* Center content in sections */
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 5px;
+            grid-row-gap: 5px; 
+            place-items: center start; /* Vertically center, horizontally align left */
+            height: 100vh; /* Makes the parent container take full viewport height */
+            margin-bottom: 20px;
+            text-align: left;
+            width: 60%;
+        }
+
+        .div1 { grid-area: 1 / 1 / 2 / 2;}
+        .div2 { grid-area: 1 / 2 / 2 / 4;}
+        .div3 { grid-area: 2 / 1 / 3 / 2;}
+        .div4 { grid-area: 2 / 2 / 3 / 4;}
+        .div5 { grid-area: 3 / 1 / 4 / 2;}
+        .div6 { grid-area: 3 / 2 / 4 / 4;} 
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertically center text */
+            text-align: left; /* Horizontally align text to the left */
+        }
+
+        .aboutme {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px; /* Adds spacing between the image and text */
+        }
+
+        .aboutme img {
+            height: auto;
+        }
+
+        .aboutme div {
+            text-align: left;
+            max-width: 50%; /* Ensures the text doesn't take up too much space */
+        }
+
+        nav ul {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0; /* Remove default padding */
+            margin: 0; /* Remove default margin */
+            display: flex; /* Arrange items in a row */
+            justify-content: space-around; /* Optional: Space items evenly */
+        }
+
+        nav ul li {
+            display: inline; /* Ensure list items are inline */
+        }
+
+        nav ul li a {
+            text-decoration: none; /* Remove underline from links */
+            padding: 10px 15px; /* Add some padding for better spacing */
+            color: #000; /* Set link color */
+        }
+
+        nav ul li a:hover {
+            color: #007BFF; /* Optional: Change color on hover */
+        }
+
+        header {
+            background-color: #b27bce; /* Set background color */
+            padding: 10px 0; /* Add padding */
+            text-align: center; /* Center text */
+        }
+
+        body {
+            background: black;
+        }
+
+        section#intro {
+            padding: 20px;
+            color: #238f89; /* Text color */
+            font-size: 1.2em; /* Adjust font size */
+            text-align: center; /* Center the text */
+            background-color: white;
+        }
+
+        section#projects {
+            padding: 20px;
+            color: #238f89; /* Text color */
+            font-size: 1.2em; /* Adjust font size */
+            text-align: center; /* Center the text */
+            background-color: white;
+        }
+
+        section#contact {
+            padding: 20px;
+            color: #238f89; /* Text color */
+            font-size: 1.2em; /* Adjust font size */
+            text-align: center; /* Center the text */
+            background-color: white;
+        }
+
+        section#about {
+            padding: 20px;
+            color: #238f89; /* Text color */
+            font-size: 1.2em; /* Adjust font size */
+            text-align: center; /* Center the text */
+            background-color: white;
+        }
+
+        @media (max-width: 768px) {
+            .parent {
+                grid-template-columns: 1fr; /* Single column layout */
+                grid-template-rows: auto; /* Adjust rows automatically */
+                width: 100%; /* Full width */
+            }
+
+            .parent img {
+                width: 100%; /* Make images responsive */
+                max-width: 200px; /* Limit maximum width */
+                height: auto; /* Maintain aspect ratio */
+            }
+
+            .aboutme {
+                flex-direction: column; /* Stack image and text vertically */
+                text-align: center; /* Center-align text */
+            }
+
+            .aboutme img {
+                width: 100%; /* Make image responsive */
+                max-width: 300px; /* Limit maximum width */
+            }
+
+            .aboutme div {
+                max-width: 100%; /* Allow text to take full width */
+            }
+
+            nav ul {
+                flex-direction: column; /* Stack navigation links vertically */
+                align-items: center; /* Center-align links */
+            }
+
+            nav ul li {
+                margin-bottom: 10px; /* Add spacing between links */
+            }
+
+            section {
+                padding: 10px; /* Reduce padding for smaller screens */
+            }
+
+            header {
+                padding: 20px; /* Adjust padding for header */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,13 +193,34 @@
         <p>Welcome to my personal portfolio! Here, you can learn more about me, explore my projects, and get in touch. Feel free to browse around and reach out if you have any questions.</p>
     </section>
     <section id="about">
-        <p>Learn more about me <a href="about.html">here</a>.</p>
+        <div class="aboutme">
+            <img src="https://placehold.co/500x300" alt="About Me Placeholder Image">
+            <div>
+                <h3>About Me</h3>
+                <p>Learn more about me</p>
+            </div>
+        </div>
     </section>
+
     <section id="projects">
-        <p>Explore my projects <a href="project.html">here</a>.</p>
+
+        <h2>Projects</h2>
+        <div class="parent">
+            <div class="div1 image"><img src="https://placehold.co/500x300" alt="Project 1 Placeholder Image"></div>
+            <div class="div2 text"><h3>Target-Tracking Mouse Clicker Robot</h3>
+                <p>3D-modeled<br>3D-printed<br>wired<br>Programmed<br>integrated Arduino Uno<br><a href="project1.html">Learn More</a>.</p></div>
+            <div class="div3 image"><img src="https://placehold.co/500x300" alt="Project 1 Placeholder Image"></div>
+            <div class="div4 text"><h3>Custom Mechanical Keyboard</h3>
+                <p>3D-modeled<br>3D-printed<br>soldered<br>wired<br>integrated Arduino Pro Micro<br><a href="project2.html">Learn More</a>.</p></div>
+            <div class="div5 image"><img src="https://placehold.co/500x300" alt="Project 1 Placeholder Image"></div>
+            <div class="div6 text"><h3>Grid Based Pathfinding Algorithm</h3>
+                <p>Learn more about Project 3 <a href="project3.html">here</a>.</p></div>
+        </div> 
+        
     </section>
+
     <section id="contact">
-        <p>Contact Info</a>.</p>
+        <p>Get in touch with me<br>petrash.joseph@gmail.com</p>
     </section>
     
     <script src="scripts/main.js"></script>
