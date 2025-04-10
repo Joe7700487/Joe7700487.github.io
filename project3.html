@@ -3,45 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Grid Based Pathfinding Algorithm - Portfolio</title>
     <link rel="stylesheet" href="styles/styles.css">
     <style>
-        /* Inline styles for the button */
-        .back-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .back-button:hover {
-            background-color: #0056b3;
-        }
-
-        section#intro {
+        .project-container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            color: #238f89; /* Text color */
-            font-size: 1.2em; /* Adjust font size */
-            text-align: center; /* Center the text */
             background-color: white;
         }
-        
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .project-description {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .project-features {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .project-features ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .project-features li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .project-features li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #007BFF;
+        }
+
+        .demo-container {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .project-content {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Project</h1>
+        <h1>Grid Based Pathfinding Algorithm</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html#projects">Back to Projects</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#demo">Live Demo</a></li>
+            </ul>
+        </nav>
     </header>
-    <section id="intro">
-        <p>Welcome to my personal portfolio! Here, you can learn more about me, explore my projects, and get in touch. Feel free to browse around and reach out if you have any questions.</p>
-    </section>
-    <a href="index.html" class="back-button">Go Back</a>
+
+    <div class="project-container">
+        <section id="overview" class="project-content">
+            <div>
+                <img src="https://placehold.co/600x400" alt="Pathfinding Algorithm Visualization" class="project-image">
+            </div>
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>An interactive implementation of the A* pathfinding algorithm, visualized on a customizable grid. This project demonstrates algorithmic problem-solving and interactive web development.</p>
+                
+                <div class="project-features">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Interactive grid-based interface</li>
+                        <li>Real-time pathfinding visualization</li>
+                        <li>Customizable grid size</li>
+                        <li>Obstacle placement</li>
+                        <li>Start and end point selection</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2>Technical Implementation</h2>
+            <div class="project-content">
+                <div>
+                    <h3>Algorithm Details</h3>
+                    <p>The implementation includes:</p>
+                    <ul>
+                        <li>A* pathfinding algorithm</li>
+                        <li>Dynamic grid generation</li>
+                        <li>Interactive user controls</li>
+                        <li>Path optimization</li>
+                        <li>Visual feedback system</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="https://placehold.co/600x400" alt="Algorithm Demonstration" class="project-image">
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="demo-container">
+            <h2>Live Demo</h2>
+            <iframe src="Placeholder/index.html" width="100%" height="600px" frameborder="0"></iframe>
+        </section>
+    </div>
+
+    <a href="index.html" class="back-button">Return to Homepage</a>
 </body>
 </html>

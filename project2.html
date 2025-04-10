@@ -3,45 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Custom Mechanical Keyboard - Portfolio</title>
     <link rel="stylesheet" href="styles/styles.css">
     <style>
-        /* Inline styles for the button */
-        .back-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .back-button:hover {
-            background-color: #0056b3;
-        }
-
-        section#intro {
+        .project-container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            color: #238f89; /* Text color */
-            font-size: 1.2em; /* Adjust font size */
-            text-align: center; /* Center the text */
             background-color: white;
         }
-        
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .project-description {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .project-features {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .project-features ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .project-features li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .project-features li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #007BFF;
+        }
+
+        @media (max-width: 768px) {
+            .project-content {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Project</h1>
+        <h1>Custom Mechanical Keyboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html#projects">Back to Projects</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#features">Features</a></li>
+            </ul>
+        </nav>
     </header>
-    <section id="intro">
-        <p>Welcome to my personal portfolio! Here, you can learn more about me, explore my projects, and get in touch. Feel free to browse around and reach out if you have any questions.</p>
-    </section>
-    <a href="index.html" class="back-button">Go Back</a>
+
+    <div class="project-container">
+        <section id="overview" class="project-content">
+            <div>
+                <img src="https://placehold.co/600x400" alt="Custom Mechanical Keyboard" class="project-image">
+            </div>
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>A fully customized mechanical keyboard featuring 3D-printed components, custom firmware, and professional-grade switches. This project combines hardware design, electronics, and programming to create a unique input device.</p>
+                
+                <div class="project-features">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Custom 3D-printed case and plate</li>
+                        <li>Arduino Pro Micro controller</li>
+                        <li>Hot-swappable mechanical switches</li>
+                        <li>Programmable RGB backlighting</li>
+                        <li>Custom keymapping support</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2>Technical Details</h2>
+            <div class="project-content">
+                <div>
+                    <h3>Build Process</h3>
+                    <p>The keyboard was created through several phases:</p>
+                    <ul>
+                        <li>CAD design and 3D printing</li>
+                        <li>PCB design and assembly</li>
+                        <li>Switch and stabilizer modification</li>
+                        <li>Firmware programming</li>
+                        <li>Custom keycap selection</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="https://placehold.co/600x400" alt="Keyboard Components" class="project-image">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <a href="index.html" class="back-button">Return to Homepage</a>
 </body>
 </html>

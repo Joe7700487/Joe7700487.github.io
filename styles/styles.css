@@ -183,3 +183,79 @@
         .button:hover {
             background-color: #0056b3;
         }
+
+        /* Navigation styling for project pages */
+        nav ul {
+            background-color: #f8f9fa;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        nav ul li a {
+            color: #007BFF;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #b27bce;
+            color: white;
+            padding: 40px 0;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        /* Back button enhancement */
+        .back-button {
+            display: block;
+            width: fit-content;
+            margin: 40px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Project page specific styles */
+        body {
+            background-color: #f0f2f5;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .project-container {
+                padding: 10px;
+            }
+            
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .project-content {
+                gap: 20px;
+            }
+        }

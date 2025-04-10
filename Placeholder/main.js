@@ -3,8 +3,8 @@ function main () {
     var grid = [];
     var rows = 10;
     var cols = 10;
-    var height = rows * 70;
-    var width = cols * 70;
+    var height = rows * 35;
+    var width = cols * 35;
     var start;
     var end;
 
