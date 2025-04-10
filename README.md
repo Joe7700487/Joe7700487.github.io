@@ -41,9 +41,3 @@ To set up and run this portfolio project, follow these steps:
 - HTML
 - CSS
 - JavaScript
-
-## Author
-
-[Your Name] - [Your Contact Information] - [Your Website or LinkedIn Profile] 
-
-Feel free to reach out for any inquiries or collaborations!
